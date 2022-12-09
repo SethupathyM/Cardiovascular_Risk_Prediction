@@ -75,12 +75,17 @@ Presicion Recall curves would be appropriate for Imbalanced dataset.
 
 #Evaluation
 
-| Model Name  | MSE  | Train R2 score | Test R2 score | Adjusted R2 score
-| :------------: |:---------------:| :-----:| :-----:| :-----:|
-|Linear Regression | 133073 | 0.66 | 0.65 | 0.64 |
-|Polynomial Regression | 70534 | 0.84 | 0.82 | 0.82
-|Random Forest Regressor | 20.37 | 0.90 | 0.87 | 0.86|
-|Gradient Boost Regressor | 24.19 | 0.86 | 0.84 | 0.84|
+| Model Name  | Train ROC AUC score | Test ROC AUC score | Train Precision Recall score | Test Precision Recall score |
+
+| :------------: |:---------------:| :-----:| :-----:| :-----:| :-----:|
+
+|Logistic Regression | 0.71 | 0.69 | 0.70 | 0.68 |
+
+|Random Forest Classifier | 0.99 | 0.97 | 0.99 | 0.97 |
+
+|Gradient Boost Classifier | 0.99 | 0.97 | 0.99 | 0.97 |
+
+|KNNeighbors Classifier | 0.95 | 0.85 | 0.95 | 0.84 |
 
 # Conclusion
 
