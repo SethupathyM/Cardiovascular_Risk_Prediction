@@ -39,9 +39,17 @@ factors.
 
 • 10-year risk of coronary heart disease CHD(binary: “1”, means “Yes”, “0” means “No”) - Dependent Variable
 
+# The Metric Trap
+
+One of the major issues when dealing with unbalanced datasets relates to the metrics used to evaluate their model. Using simpler metrics like accuracy score can be misleading. In a dataset with highly unbalanced classes, the classifier will always “predict” the most common class without performing any analysis of the features and it will have a high accuracy rate, obviously not the correct one.
+
 # Handling Imbalanced Dataset
 
 The given data is highly imbalanced data so I have used SMOTE Technique to overcome this problem. SMOTE is the technique of handling imbalanced dataset by creating synthetic datapoints of minority class. Here class 1 is the minority class which is oversampled by SMOTE by synthetic datapoints.
+
+Synthetic Minority Oversampling Technique (SMOTE)
+
+New examples are synthesized from the existing examples. This is a type of data augmentation for the minority class.
 
 Dependent Variable count (Before SMOTE)
 
@@ -76,5 +84,13 @@ Presicion Recall curves would be appropriate for Imbalanced dataset.
 
 # Conclusion
 
-Achieved ROC-AUC score of 0.978 and used confusion matrix to visualize TP,TN,FP,FN. ln focus to reduce False Negatives model is designed.
+* Achieved ROC-AUC score of 0.978 and used confusion matrix to visualize TP,TN,FP,FN. ln focus to reduce False Negatives model is designed.
+
+* It’s quite obvious that smokers have a high risk of 10 year CHD.
+
+* Patients with no history of hypertensive, stroke, diabetes have less risk of 10 year CHD.
+
+* By using simple Logistic Regressor algorithm we were able to get the Precision Recall AUC score of 68 % Very little improvement in Precision Recall AUC score after using Random Forest classifier because of data imbalance.
+
+* Top five most important features are SysBP,Glucose ,Totchol,age,Cigsperday 
 
